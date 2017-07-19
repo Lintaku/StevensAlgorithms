@@ -7,6 +7,7 @@ import java.lang.Math;
 public class pangramChecker {
   
   private static final int letterCount = 26;
+  //The int, letterCount, represents the number of letters in the alphabet. 
   
   public static void main(String[] args) {
     
@@ -22,16 +23,16 @@ public class pangramChecker {
   private static boolean Pangram(String sentence){
     
     if(sentence.length() < letterCount) {
-     
+     //If the length of the sentence does not have all the required letters then the sentence is false
+     //Or not a pangram
       return false;
       
     }
     
     for (char ch = 'A'; ch <= 'Z'; ch++) {
+      //Each char variable auto-increments the index by one from A to Z.
       
-      if (sentence.indexOf(ch) < 0&& sentence.indexOf((char) (ch + 32)) < 0) {
-        
-       
+      if (sentence.indexOf(ch) < 0&& sentence.indexOf((char) (ch + 32)) < 0) {  
         return false;
      
       }
